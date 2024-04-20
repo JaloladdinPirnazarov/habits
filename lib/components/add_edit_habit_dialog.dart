@@ -52,13 +52,13 @@ class AddEditHabitDialog extends StatelessWidget {
       ),
       actions: [
         MaterialButton(
+          onPressed: dismissDialog,
+          child: const Text('Cancel'),
+        ),
+        MaterialButton(
           onPressed: addEditHabit,
           child: Text(action),
         ),
-        MaterialButton(
-          onPressed: dismissDialog,
-          child: const Text('Cancel'),
-        )
       ],
     );
   }

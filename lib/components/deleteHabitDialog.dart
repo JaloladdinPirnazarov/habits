@@ -12,17 +12,17 @@ class DeleteHabitDialog extends StatelessWidget {
       actions: [
         MaterialButton(
           onPressed: () {
+            Navigator.of(context).pop();
+          },
+          child: const Text('Cancel'),
+        ),
+        MaterialButton(
+          onPressed: () {
             context.read<HabitDatabase>().deleteHabit(habit.id);
             Navigator.of(context).pop();
           },
           child: const Text('Yes'),
         ),
-        MaterialButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          child: const Text('Cancel'),
-        )
       ],
     );
   }
